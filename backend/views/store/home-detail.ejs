@@ -1,0 +1,34 @@
+<%- include('../partials/head') %>
+
+  <body>
+    <%- include('../partials/nav') %>
+      <main>
+        <h2>Details of <%= home.HouseName %></h2>
+        </main>
+
+        <div class="mainbox">
+          <div class="image">
+            <img src="
+            <%= home.Photo %>
+            " alt="W3Schools.com" width="200px" height="200px" >
+          </div>
+          <div class="houseRat">
+            <%= home.Rating %>+
+          </div>
+          <div class="housename">
+            <%= home.HouseName %>
+          </div>
+          <div class="houseprice">
+            <%= home.Price %> ₹ Per Night
+          </div>
+          <div class="houseloc">
+            <%= home.Location %>, india
+          </div>
+          <div class="houseloc">
+            <%= home.Description %>
+          </div>
+          <%- include('../partials/fav') %>
+        </div>
+  </body>
+
+  </html>

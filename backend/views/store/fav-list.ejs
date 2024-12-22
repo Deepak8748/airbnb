@@ -1,0 +1,37 @@
+<%- include('../partials/head') %>
+
+  <body>
+    <%- include('../partials/nav') %>
+      <main>
+        <h2>Here Is Your Favourites Homes :</h2>
+        </main>
+        
+        <div class="mainbox">
+          <% favhomes.forEach((home)=> { %>
+          <div class="image">
+            <img src="
+            <%= home.Photo %>
+            " alt="W3Schools.com" width="200px" height="200px" >
+          </div>
+          <div class="houseRat">
+            <%= home.Rating %>+
+          </div>
+          <div class="housename">
+            <%= home.HouseName %>
+          </div>
+          <div class="houseprice">
+            <%= home.Price %> ₹ Per Night
+          </div>
+          <div class="houseloc">
+            <%= home.Location %>, india
+          </div>
+          <button class="book">BOOK</button>
+          <form action="/favourite/delete/<%= home._id %>" method="post">
+            <button class="book" style="background-color: rgb(255, 128, 128);">Delete From Favourite</button>
+          </form>
+          <% }) %>
+        </div>
+      </main>
+  </body>
+
+  </html>

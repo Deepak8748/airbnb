@@ -1,0 +1,51 @@
+<%- include('../partials/head') %>
+<style>
+  .submit{
+    background-color: rgb(148, 238, 148);
+    font-size: 18px;
+    border: 2px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 3px;
+    font-weight: 550;
+  }
+  .submit:hover{
+    background-color: rgb(40, 221, 40) ;
+  }
+  input{
+    font-size: 17px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+  }
+</style>
+
+<body>
+  <%- include('../partials/nav') %>
+  <header>
+    <h1>Register Your Home</h1>
+  </header>
+  <br/>
+  <main>
+    <form action="/host/add-home" method="POST">
+      <input type="text" name="HouseName" placeholder="Enter name of your House" />
+      <br />
+      <br />
+      <input type="text" name="Price" placeholder="Enter Price Per Night" />
+      <br />
+      <br />
+      <input type="text" name="Location" placeholder="Enter Location of House" />
+      <br />
+      <br />
+      <input type="text" name="Rating" placeholder="Rating of House" />
+      <br />
+      <br />
+      <input type="text" name="Photo" placeholder="URL of image" />
+      <br />
+      <br />
+      <input class="submit" type="submit" value="SUBMIT" />
+    </form>
+  </main>
+</body>
+
+</html>

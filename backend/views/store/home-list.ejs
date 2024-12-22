@@ -1,0 +1,38 @@
+<%- include('../partials/head') %>
+
+  <body>
+    <%- include('../partials/nav') %>
+      <header>
+        <h1>Welcome to airbnb Home Page</h1>
+      </header>
+      <main>
+        <h2>Here Is Your Registered Homes :</h2>
+        </main>
+        
+        <div class="mainbox">
+          <% homes.forEach((home)=> { %>
+          <div class="image">
+            <img src="
+            <%= home.Photo %>
+            " alt="W3Schools.com" width="200px" height="200px" >
+          </div>
+          <div class="houseRat">
+            <%= home.Rating %>+
+          </div>
+          <div class="housename">
+            <%= home.HouseName %>
+          </div>
+          <div class="houseprice">
+            <%= home.Price %> ₹ Per Night
+          </div>
+          <div class="houseloc">
+            <%= home.Location %>, india
+          </div>
+          <a class="detail" href="/homes/<%= home._id %>">Details</a>
+          <%- include('../partials/fav', {home : home}) %>
+          <% }) %>
+        </div>
+      </main>
+  </body>
+
+  </html>

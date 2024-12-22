@@ -1,0 +1,39 @@
+<%- include('../partials/head') %>
+
+  <body>
+    <%- include('../partials/nav') %>
+      <header>
+        <h1>Welcome to HOST-HOME-LIST</h1>
+      </header>
+      <main>
+        <h2>HEY HOST! HERE ARE YOUR HOMES</h2>
+        </main>
+        <div class="mainbox">
+          <% homes.forEach((home)=> { %>
+          <div class="image">
+            <img src="
+            <%= home.Photo %>
+            " alt="W3Schools.com" width="200px" height="200px" >
+          </div>
+          <div class="houseRat">
+            <%= home.Rating %>+
+          </div>
+          <div class="housename">
+            <%= home.HouseName %>
+          </div>
+          <div class="houseprice">
+            <%= home.Price %> ₹ Per Night
+          </div>
+          <div class="houseloc">
+            <%= home.Location %>, India
+          </div>
+          <a href="/host/edit-home/<%= home._id %>?editing=true" class="edit">EDIT</a>
+          <form action="/host/delete-home/<%= home._id %>" method="post">
+            <button class="del">DELETE</button>
+          </form>
+          <% }) %>
+        </div>
+      </main>
+  </body>
+
+  </html>
