@@ -22,9 +22,14 @@ app.use(express.static(path.join(rootDir, "public")));
 
 app.use(error.get404);
 
-const PORT = 3002;
+mongoConnect(() => {
+
+});
+  app.listen(9000, console.log(`Server is runnning on http://localhost:9000`));
+
+/*const PORT = 3002;
 mongoConnect(() => {
   app.listen(PORT, () => {
     console.log(`Server is runnning on http://localhost:${PORT}`);
   });
-});
+});*/
