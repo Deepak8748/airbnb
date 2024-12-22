@@ -3,8 +3,6 @@ const mongo = require("mongodb");
 
 const MongoClient = mongo.MongoClient;
 
-/*const MONGO_URL =
-  "mongodb+srv://dk1408264:GuKdVWMJ348rbPeu@mstech.6hii0.mongodb.net/?retryWrites=true&w=majority&appName=MSTECH";*/
 
 let _db;  
 
