@@ -25,7 +25,7 @@ app.use(error.get404);
 mongoConnect(() => {
 
 });
-  app.listen(9000, console.log(`Server is runnning on http://localhost:9000`));
+  app.listen(3495);
 
 /*const PORT = 3002;
 mongoConnect(() => {
